@@ -124,7 +124,7 @@ def index():
 
 if __name__ == '__main__':
     fake_data = FakeContact()
-    contact_data = fake_data.generate_data(10)
-    port = int(os.environ.get('PORT', 33507))
-    app.run(debug=True, host='0.0.0.0', port=33507)
+    contact_data = fake_data.generate_data(1)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
 
