@@ -124,5 +124,5 @@ def index():
 if __name__ == '__main__':
     fake_data = FakeContact()
     contact_data = fake_data.generate_data(10)
-    app.run(host='0.0.0.0', port=9002)
+    app.run()
 
