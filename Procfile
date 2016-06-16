@@ -1,1 +1,1 @@
-web: python src/app.py
+web: sh script.sh
