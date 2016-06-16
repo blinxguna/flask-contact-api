@@ -2,6 +2,7 @@
 from flask import Flask, jsonify, request
 from flask_restful import reqparse, abort, Api, Resource
 from fake_input_generator import FakeContact
+import os
 
 app = Flask(__name__)
 api = Api(app)
@@ -124,5 +125,6 @@ def index():
 if __name__ == '__main__':
     fake_data = FakeContact()
     contact_data = fake_data.generate_data(10)
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
 
