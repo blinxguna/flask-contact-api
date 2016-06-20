@@ -5,7 +5,7 @@ Requirement
 Need contact api with 
  - create, update, delete, edit
  - get a particular contact
- - search for a contact by name and email
+ - search for a contact by email
 
 # Mock the Database no real database required
 
@@ -32,10 +32,20 @@ Sample Record
 # Api exposed
 
 1. Get all contacts
-   curl -v "http://127.0.0.1:9002/api/v1/contact/"
+
+   curl -v "http://127.0.0.1:9002/api/v1/contact"
+   
+  open in browser
+  
+   https://flask-contact-api.herokuapp.com/api/v1/contact
 
 2. Get specific contact
+
    curl -v "http://127.0.0.1:9002/api/v1/contact/someemail@domain.com"
+   
+  open in browser
+  
+   https://flask-contact-api.herokuapp.com/api/v1/contact/aurelia98@connelly-lehner.com
 
 3. Update specific contact
    curl -X PUT -H "Content-Type: application/json" -d '{
@@ -75,7 +85,9 @@ Sample Record
 
 
 5. Delete existing contact
+
    curl -X DELETE -v "http://localhost:9002/api/v1/contact/willaimlesch@gmail.com" 
 
 Heroku app -- url
+
 https://flask-contact-api.herokuapp.com/
